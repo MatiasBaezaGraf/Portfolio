@@ -18,7 +18,7 @@ class MyDocument extends Document {
                     href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
                     rel="stylesheet"
                 />
-                <body>
+                <body className="scrollbar-hide">
                     <Main />
                     <NextScript />
                 </body>
