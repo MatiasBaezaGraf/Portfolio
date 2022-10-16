@@ -44,7 +44,7 @@ const Home = () => {
     };
 
     return (
-        <div className={darkModeActive && "dark"}>
+        <div className={darkModeActive ? "dark" : ""}>
             <div className="min-h-screen bg-split-light dark:bg-split-dark bg-fixed text-black dark:text-white">
                 <title>Matías Baeza Graf</title>
                 <Navbar

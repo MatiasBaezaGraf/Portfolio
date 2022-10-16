@@ -2,8 +2,9 @@ import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import { useDarkMode } from "next-dark-mode";
 import Image, { StaticImageData } from "next/future/image";
+import ProjectGallery from "./ProjectGallery";
 
-const Project1 = (propsWithType: {
+const Project = (propsWithType: {
     children: any;
     title: string;
     languages: Array<string>;
@@ -32,60 +33,62 @@ const Project1 = (propsWithType: {
     };
 
     return (
-        <div className={darkModeActive && "dark"}>
-            <div className="min-h-screen bg-split-light dark:bg-split-dark bg-fixed text-black dark:text-white">
+        <div className={darkModeActive ? "dark" : ""}>
+            <div className="flex flex-col min-h-screen bg-split-light dark:bg-split-dark bg-fixed text-black dark:text-white">
                 <title>Matías Baeza Graf</title>
                 <Navbar
                     setLoadOut={() => setLoadOut(true)}
                     toggleDarkMode={toggleMode}
                 />
                 <div
-                    className={`transform duration-300 p-16 ${
+                    className={`transform duration-300 flex flex-col justify-between p-14 ${
                         loadOut ? "opacity-0" : "opacity-1"
                     }`}
                 >
-                    <div
-                        className={`transform duration-500 flex flex-col items-center ${
-                            loaded
-                                ? "opacity-1 translate-y-0"
-                                : "opacity-0 -translate-y-20"
-                        }`}
-                    >
-                        <h1 className="font-title font-bold text-4xl mb-9">
-                            {propsWithType.title}
-                        </h1>
-                        <div className="flex flex-row justify-center font-second font-bold text-lg mb-9">
-                            {propsWithType.languages.map((language) => (
-                                <div className="flex flex-row justify-start items-center w-fit bg-stone-500 text-black rounded my-2 mr-4 py-1 px-2">
-                                    <Image
-                                        src={`/languages/${language}.png`}
-                                        alt={language}
-                                        width={35}
-                                        height={35}
-                                    />
-                                    <h1 className="ml-2">{language}</h1>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="font-title text-xl leading-relaxed text-center w-2/3 mb-7">
-                            {propsWithType.children}
-                        </div>
-                        <div className="flex flex-row">
-                            {propsWithType.images.map((image) => (
-                                <div className="mx-1 border-black border-2">
-                                    <Image
-                                        src={image}
-                                        placeholder="blur"
-                                        alt="Project"
-                                    />
-                                </div>
-                            ))}
+                    <div className={``}>
+                        <div
+                            className={`transform duration-500 flex flex-col items-center ${
+                                loaded
+                                    ? "opacity-1 translate-y-0"
+                                    : "opacity-0 -translate-y-20"
+                            }`}
+                        >
+                            <h1 className="font-title font-bold text-4xl mb-9">
+                                {propsWithType.title}
+                            </h1>
+                            <div className="flex flex-row justify-center font-second font-bold text-lg mb-9">
+                                {propsWithType.languages.map((language) => (
+                                    <div className="flex flex-row justify-start items-center w-fit bg-stone-500 text-black rounded my-2 mr-4 py-1 px-2">
+                                        <Image
+                                            src={`/languages/${language}.png`}
+                                            alt={language}
+                                            width={35}
+                                            height={35}
+                                        />
+                                        <h1 className="ml-2">{language}</h1>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="font-title text-xl leading-relaxed text-center w-2/3 mb-7">
+                                {propsWithType.children}
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div
+                    className={`transform duration-300 flex flex-grow items-end justify-center ${
+                        loadOut ? "opacity-0" : "opacity-1"
+                    } ${
+                        loaded
+                            ? "opacity-1 translate-y-0"
+                            : "opacity-0 translate-y-20"
+                    }`}
+                >
+                    <ProjectGallery images={propsWithType.images} />
                 </div>
             </div>
         </div>
     );
 };
 
-export default Project1;
+export default Project;
