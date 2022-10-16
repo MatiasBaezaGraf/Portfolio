@@ -12,7 +12,7 @@ const Project1 = () => {
         <div>
             <Project
                 title="Weather"
-                languages={["Python"]}
+                languages={["Python", "Python"]}
                 images={[
                     Image1,
                     Image2,
