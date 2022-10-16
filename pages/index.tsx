@@ -174,7 +174,7 @@ const Home = () => {
                                 <span className="font-bold">
                                     Systems Engineer
                                 </span>{" "}
-                                and I'm passionate for{" "}
+                                and I&#39;m passionate for{" "}
                                 <span className="font-bold">
                                     software development
                                 </span>{" "}
@@ -199,14 +199,15 @@ const Home = () => {
                                 <li className={listItemClasses}>
                                     <ShuffleIcon height={30} width={30} />
                                     <p className={listParagraphClasses}>
-                                        I'm versatile and can efficiently work
-                                        either by myself or as a part of a team.
+                                        I&#39;m versatile and can efficiently
+                                        work either by myself or as a part of a
+                                        team.
                                     </p>
                                 </li>
                                 <li className={listItemClasses}>
                                     <SchoolIcon width={30} height={30} />
                                     <p className={listParagraphClasses}>
-                                        I'm a fast learner, so acquiring new
+                                        I&#39;m a fast learner, so acquiring new
                                         skills to work with always gets me.
                                     </p>
                                 </li>
