@@ -80,7 +80,7 @@ const Home = () => {
                         >
                             <p className="font-main leading-relaxed text-xl mb-4 ml-2">
                                 Hello there! I was born, raised and currently
-                                based in Argentina. In december I become a{" "}
+                                based in Argentina. In December I become a{" "}
                                 <span className="font-bold">
                                     Systems Engineer
                                 </span>{" "}
