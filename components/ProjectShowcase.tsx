@@ -94,8 +94,9 @@ const ProjectShowcase = (propsWithType: {
                         : "opacity-0 translate-y-12"
                 }`}
             >
-                {projects.map((project) => (
+                {projects.map((project, index) => (
                     <div
+                        key={index}
                         onClick={() => openProject(project.id)}
                         onMouseEnter={() => {
                             setProjectHovering(project.id);
@@ -123,8 +124,8 @@ const ProjectShowcase = (propsWithType: {
                                 {project.description}
                             </p>
                             <div className="flex flex-row">
-                                {project.languages.map((language) => (
-                                    <div className="mr-4 mt-2">
+                                {project.languages.map((language, index) => (
+                                    <div key={index} className="mr-4 mt-2">
                                         <Image
                                             src={`/languages/${language}.png`}
                                             alt={language}

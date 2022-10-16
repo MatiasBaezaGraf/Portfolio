@@ -57,17 +57,22 @@ const Project = (propsWithType: {
                                 {propsWithType.title}
                             </h1>
                             <div className="flex flex-row justify-center font-second font-bold text-lg mb-9">
-                                {propsWithType.languages.map((language) => (
-                                    <div className="flex flex-row justify-start items-center w-fit bg-stone-500 text-black rounded my-2 mr-4 py-1 px-2">
-                                        <Image
-                                            src={`/languages/${language}.png`}
-                                            alt={language}
-                                            width={35}
-                                            height={35}
-                                        />
-                                        <h1 className="ml-2">{language}</h1>
-                                    </div>
-                                ))}
+                                {propsWithType.languages.map(
+                                    (language, index) => (
+                                        <div
+                                            key={index}
+                                            className="flex flex-row justify-start items-center w-fit bg-stone-500 text-black rounded my-2 mr-4 py-1 px-2"
+                                        >
+                                            <Image
+                                                src={`/languages/${language}.png`}
+                                                alt={language}
+                                                width={35}
+                                                height={35}
+                                            />
+                                            <h1 className="ml-2">{language}</h1>
+                                        </div>
+                                    )
+                                )}
                             </div>
                             <div className="font-title text-xl leading-relaxed text-center w-2/3 mb-7">
                                 {propsWithType.children}
