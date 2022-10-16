@@ -61,7 +61,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                 </h1>
             </div>
             <form
-                className="flex flex-col w-4/5 tablet:2/3 font-second text-xl"
+                className="flex flex-col w-4/5 tablet:w-2/3 font-second text-xl"
                 ref={form}
                 onSubmit={sendEmail}
             >
