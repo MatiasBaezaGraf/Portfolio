@@ -16,7 +16,7 @@ const projects = [
         id: 1,
         name: "Weather",
         description: "Weather forecast website made to learn Flask",
-        languages: ["python"],
+        languages: ["Python"],
         image: Weather,
     },
     {
@@ -64,8 +64,6 @@ const ProjectShowcase = (propsWithType: {
     fadeOutHandler: () => void;
 }) => {
     const [projectHovering, setProjectHovering] = useState(0);
-
-    const router = useRouter();
 
     const openProject = (id: number) => {
         propsWithType.fadeOutHandler();

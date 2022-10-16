@@ -13,6 +13,8 @@ const Project = (propsWithType: {
     const [loaded, setLoaded] = useState(false);
     const [loadOut, setLoadOut] = useState(false);
 
+    console.log(propsWithType.languages);
+
     useEffect(() => {
         setLoaded(true);
     }, []);
