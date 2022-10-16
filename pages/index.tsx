@@ -103,7 +103,7 @@ const Home = () => {
                                     <PsychologyIcon height={30} width={30} />
                                     <p className={listParagraphClasses}>
                                         As an almost Systems Engineer, problem
-                                        solving is one of my strenghts.
+                                        solving is one of my strengths.
                                     </p>
                                 </li>
                                 <li className={listItemClasses}>
