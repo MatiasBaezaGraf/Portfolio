@@ -30,7 +30,8 @@ const SocialTabs = (propsWithType: { loaded: boolean; darkMode: boolean }) => {
                         propsWithType.darkMode ? "#FD5DFF" : "#b31db5"
                     }`}
                     bgColor="transparent"
-                    url="https://www.instagram.com/matibaezagraf/"
+                    url="https://ig.me/m/matibaezagraf"
+                    network="instagram"
                     target="blank"
                 />
             </div>

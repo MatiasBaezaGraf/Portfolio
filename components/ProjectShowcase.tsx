@@ -81,12 +81,12 @@ const ProjectShowcase = (propsWithType: {
                         : "opacity-0 -translate-y-12"
                 }`}
             >
-                <h1 className="transform duration-1000 text-6xl font-second font-bold text-black dark:text-white">
+                <h1 className="transform duration-1000 text-6xl font-second font-bold text-center text-black dark:text-white">
                     My projects
                 </h1>
             </div>
             <div
-                className={`relative transform duration-1000 grid laptop:grid-cols-2 desktop:grid-cols-3 mb-10 mr-[60px] ml-[10px] ${
+                className={`relative transform duration-1000 grid laptop:grid-cols-2 desktop:grid-cols-3 mb-10 mx-6 tablet:mx-10 ${
                     propsWithType.loaded
                         ? "opacity-1 translate-y-0"
                         : "opacity-0 translate-y-12"

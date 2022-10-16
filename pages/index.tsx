@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import Image from "next/future/image";
-import { SocialIcon } from "react-social-icons";
 import { useEffect, useState } from "react";
 import { useDarkMode } from "next-dark-mode";
 
@@ -12,6 +11,7 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 
 import portrait from "../public/mainicons/portrait.png";
+import MainTitle from "../components/MainTitle";
 
 const Home = () => {
     const [loaded, setLoaded] = useState(false);
@@ -49,107 +49,17 @@ const Home = () => {
                     toggleDarkMode={toggleMode}
                 />
                 <div
-                    className={`transform duration-300 flex flex-col px-32 py-12 ${
+                    className={`transform duration-300 flex flex-col px-5 py-10 laptop:px-32 laptop:py-12 ${
                         loadOut ? "opacity-0" : "opacity-1"
                     }`}
                 >
-                    <div className="flex flex-col pb-4">
-                        <h1
-                            className={` transform duration-1000 font-second font-bold text-7xl ${
-                                loaded
-                                    ? "opacity-1 translate-y-0"
-                                    : "opacity-0 -translate-y-12"
-                            }`}
-                        >
-                            <span className="mr-6">Matias Baeza Graf</span>
-                            <span
-                                className={`transform duration-500 delay-1000 mr-3 ${
-                                    loaded ? "opacity-1" : "opacity-0"
-                                }`}
-                            >
-                                <SocialIcon
-                                    className="transform duration-500 hover:-translate-y-2"
-                                    fgColor={`${
-                                        darkModeActive ? "#3498DB" : "#1773b3"
-                                    }`}
-                                    bgColor="transparent"
-                                    url="https://twitter.com/matibaezagraf"
-                                    target="blank"
-                                />
-                            </span>
-                            <span
-                                className={`transform duration-500 delay-[1200ms] mr-3 ${
-                                    loaded ? "opacity-1" : "opacity-0"
-                                }`}
-                            >
-                                <SocialIcon
-                                    className="transform duration-500 hover:-translate-y-2"
-                                    fgColor={`${
-                                        darkModeActive ? "#FD5DFF" : "#b31db5"
-                                    }`}
-                                    bgColor="transparent"
-                                    url="https://www.instagram.com/matibaezagraf/"
-                                    target="blank"
-                                />
-                            </span>
-                            <span
-                                className={`transform duration-500 delay-[1400ms] mr-3 ${
-                                    loaded ? "opacity-1" : "opacity-0"
-                                }`}
-                            >
-                                <SocialIcon
-                                    className="transform duration-500 hover:-translate-y-2"
-                                    fgColor={`${
-                                        darkModeActive ? "#58D68D " : "#14b356"
-                                    }`}
-                                    bgColor="transparent"
-                                    url="https://wa.me/2235440115"
-                                    network="whatsapp"
-                                    target="blank"
-                                />
-                            </span>
-                            <span
-                                className={`transform duration-500 delay-[1600ms] mr-3 ${
-                                    loaded ? "opacity-1" : "opacity-0"
-                                }`}
-                            >
-                                <SocialIcon
-                                    className="transform duration-500 hover:-translate-y-2"
-                                    fgColor={`${
-                                        darkModeActive ? "white" : "black"
-                                    }`}
-                                    bgColor="transparent"
-                                    url="https://github.com/MatiasBaezaGraf"
-                                    target="blank"
-                                />
-                            </span>
-                            <span
-                                className={`transform duration-500 delay-[1800ms] mr-3 ${
-                                    loaded ? "opacity-1" : "opacity-0"
-                                }`}
-                            >
-                                <SocialIcon
-                                    className="transform duration-500 hover:-translate-y-2"
-                                    fgColor="#207FFF "
-                                    bgColor="transparent"
-                                    url="https://www.linkedin.com/in/matias-baeza-graf-28781a224"
-                                    target="blank"
-                                />
-                            </span>
-                        </h1>
-                        <h1
-                            className={`transform duration-1000 font-second text-4xl ${
-                                loaded
-                                    ? "opacity-1 translate-y-0"
-                                    : "opacity-0 -translate-y-12"
-                            }`}
-                        >
-                            Software Developer
-                        </h1>
-                    </div>
-                    <div className="flex flex-row">
+                    <MainTitle
+                        loaded={loaded}
+                        darkModeActive={darkModeActive}
+                    />
+                    <div className="flex flex-col items-center laptop:items-start laptop:flex-row">
                         <div
-                            className={`transform duration-1000 rounded-lg w-1/3 overflow-hidden ${
+                            className={`transform duration-1000 rounded-lg w-5/6 tablet:w-2/3 laptop:w-1/3 laptop:m-0 overflow-hidden shadow-lg shadow-stone-600 dark:shadow-black ${
                                 loaded
                                     ? "translate-x-0"
                                     : "-translate-x-[40rem]"
@@ -162,7 +72,7 @@ const Home = () => {
                             />
                         </div>
                         <div
-                            className={`transform duration-1000 w-2/3 ml-4 ${
+                            className={`transform duration-1000 w-5/6 tablet:w-2/3 my-4 laptop:ml-4 laptop:my-0 ${
                                 loaded
                                     ? "translate-x-0 opacity-1"
                                     : "translate-x-20 opacity-0"

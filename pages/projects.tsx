@@ -39,7 +39,7 @@ const Projects = () => {
                         loadOut ? "opacity-0" : "opacity-1"
                     }`}
                 >
-                    <div className="flex flex-col justify-center h-screen -mt-12 sticky top-0">
+                    <div className="flex flex-col justify-center h-screen -mt-12 sticky top-0 w-1">
                         <SocialTabs loaded={loaded} darkMode={darkModeActive} />
                     </div>
                     <div className="flex flex-col flex-grow items-center">

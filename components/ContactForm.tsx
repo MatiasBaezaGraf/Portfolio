@@ -49,15 +49,15 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
 
     return (
         <div className="flex flex-col items-center w-full py-12">
-            <div className="flex flex-row justify-start w-2/3">
+            <div className="flex flex-row justify-start w-4/5 tablet:w-2/3">
                 <h1
-                    className={`transform duration-1000 font-second font-bold text-6xl p-2 text-black dark:text-white ${
+                    className={`transform duration-1000 font-second font-bold text-center tablet:text-start text-6xl p-2 text-black dark:text-white ${
                         propsWithType.loaded
                             ? "translate-y-0 opacity-1"
                             : "-translate-y-12 opacity-0"
                     } `}
                 >
-                    Let&#39;s get in touch!
+                    Let&#39;s get in contact!
                 </h1>
             </div>
             <form
@@ -103,7 +103,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                 />
                 <div className="flex flex-row items-center">
                     <button
-                        className={`group transform duration-1000 delay-[1700ms] flex flex-row w-min items-center text-xl m-2 p-2 pr-3 rounded bg-white dark:bg-gray-800 ${
+                        className={`group transform duration-1000 delay-[1700ms] flex flex-row w-min items-center text-xl m-2 p-2 pr-3 rounded dark:text-white bg-gray-800 ${
                             propsWithType.loaded
                                 ? "translate-y-0 opacity-1"
                                 : "translate-y-12 opacity-0"
