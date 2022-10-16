@@ -26,11 +26,11 @@ const Project4 = () => {
                     instant, replacing a process that required paperwork and
                     time. It includes the option to download the document in PDF
                     and an easy QR validation in conjuntion with the app UAP
-                    Certificados, to check it's validity.
+                    Certificados, to check it&#39;s validity.
                 </p>
                 <br />
                 <p>
-                    The app is connected directly to the organization's
+                    The app is connected directly to the organization&#39;s
                     database, which runs on{" "}
                     <span className="font-bold">PostgreSQL</span>, so it can
                     easily retrieve the required data to tell if a student is

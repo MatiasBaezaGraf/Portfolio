@@ -15,19 +15,19 @@ const Project2 = () => {
                     This web app was built for the UAP students, to easily
                     verify the validity of their Student Certificates, and for
                     the UAP itself, to prevent forgery of certificates. It
-                    consists of a form in which you put a certificate's unique
-                    code, and it shows, if it exists, to who it belongs, if it
-                    is currently valid and it's validity period. It also
-                    provides easy QR validation. If you scan the certificate's
-                    QR code, it redirects you to a page with all the mentioned
-                    information.
+                    consists of a form in which you put a certificate&#39;s
+                    unique code, and it shows, if it exists, to who it belongs,
+                    if it is currently valid and it&#39;s validity period. It
+                    also provides easy QR validation. If you scan the
+                    certificate&#39;s QR code, it redirects you to a page with
+                    all the mentioned information.
                 </p>
                 <br />
                 <p>
                     The app talks directly with the database, which runs on{" "}
                     <span className="font-bold">PostgreSQL</span>, to retrieve
                     all the required information related to the provided
-                    certificate code. The form is protected with Google's{" "}
+                    certificate code. The form is protected with Google&#39;s{" "}
                     <span className="font-bold">reCAPTCHA</span>, to counter
                     DDOS attacks.
                 </p>

@@ -57,7 +57,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                             : "-translate-y-12 opacity-0"
                     } `}
                 >
-                    Let's get in touch!
+                    Let&#39;s get in touch!
                 </h1>
             </div>
             <form

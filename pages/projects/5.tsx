@@ -14,10 +14,10 @@ const Project5 = () => {
             >
                 <p>
                     This mobile Android app was developed as a final project for
-                    a university subject. It's main purpose is to follow the
+                    a university subject. It&#39;s main purpose is to follow the
                     evolution of the Argentine general Consumer Price Index and
-                    it's variation. The data comes from a government open API.
-                    It uses Google's{" "}
+                    it&#39;s variation. The data comes from a government open
+                    API. It uses Google&#39;s{" "}
                     <span className="font-bold">Material Design Theme</span> and
                     consists of a pair of graph charts and a table with the
                     detailed information shown in the charts.

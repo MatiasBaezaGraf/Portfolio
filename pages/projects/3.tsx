@@ -40,8 +40,8 @@ const Project3 = () => {
                     The backend functionality was developed with the{" "}
                     <span className="font-bold">Python</span> framework,{" "}
                     <span className="font-bold">Django Rest Framework</span>.
-                    This last one was chosen for it's simplicity, felxibility
-                    and powerful serialization engine.
+                    This last one was chosen for it&#39;s simplicity,
+                    felxibility and powerful serialization engine.
                 </p>
             </Project>
         </div>
