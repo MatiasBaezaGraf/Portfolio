@@ -45,7 +45,7 @@ const Modal = (propsWithType: {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="mt-12 w-full max-w-laptop transform overflow-hidden rounded-2xl dark:bg-stone-800 bg-stone-300 p-6 text-right align-middle shadow-xl transition-all">
+                                <Dialog.Panel className="mt-12 w-full max-w-laptop transform overflow-hidden rounded-lg dark:bg-stone-800 bg-stone-300 p-6 text-right align-middle shadow-xl transition-all">
                                     <div>
                                         <button
                                             type="button"

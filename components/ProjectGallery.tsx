@@ -8,7 +8,7 @@ const ProjectGallery = (propsWithType: { images: Array<StaticImageData> }) => {
     const [selectedImage, setSelectedImage] = useState();
 
     const scrollHandle = (direction: string) => {
-        const sample = document.getElementById("1");
+        const sample = document.getElementById("0");
         const scrollElement = document.getElementById("scrollElement");
         if (direction === "forward") {
             scrollElement.scrollBy(sample.offsetWidth, 0);
@@ -23,9 +23,9 @@ const ProjectGallery = (propsWithType: { images: Array<StaticImageData> }) => {
     };
 
     return (
-        <div className="transform duration-300 flex flex-col py-4 bg-stone-500/75 dark:bg-stone-700/50 backdrop-blur-sm">
+        <div className="transform duration-300 flex flex-col min-w-full py-4 bg-stone-500/75 dark:bg-stone-700/50 backdrop-blur-sm">
             <h1 className="font-title text-xl pl-12 font-bold">Gallery</h1>
-            <div className="flex flex-row items-center">
+            <div className="flex flex-row items-center justify-center">
                 <button onClick={() => scrollHandle("backwards")}>
                     <ChevronLeftIcon className="dark:text-white dark:hover:text-stone-300 text-black hover:text-stone-800 w-12 h-12" />
                 </button>
@@ -41,7 +41,7 @@ const ProjectGallery = (propsWithType: { images: Array<StaticImageData> }) => {
                             className="transform duration-300 cursor-pointer flex-shrink-0 snap-center m-5 border-black border-2 hover:scale-110"
                         >
                             <Image
-                                className="w-[400px]"
+                                className="w-[250px] tablet:w-[400px]"
                                 src={image}
                                 placeholder="blur"
                                 alt="Project"

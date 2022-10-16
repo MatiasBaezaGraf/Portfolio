@@ -43,7 +43,7 @@ const Project = (propsWithType: {
                     toggleDarkMode={toggleMode}
                 />
                 <div
-                    className={`transform duration-300 flex flex-col justify-between p-14 ${
+                    className={`transform duration-300 flex flex-col justify-between pt-14 laptop:p-14 ${
                         loadOut ? "opacity-0" : "opacity-1"
                     }`}
                 >
@@ -58,7 +58,7 @@ const Project = (propsWithType: {
                             <h1 className="font-title font-bold text-4xl mb-9">
                                 {propsWithType.title}
                             </h1>
-                            <div className="flex flex-row justify-center font-second font-bold text-lg mb-9">
+                            <div className="flex flex-col tablet:flex-row justify-center font-second font-bold items-center text-lg mb-9">
                                 {propsWithType.languages.map(
                                     (language, index) => (
                                         <div
@@ -76,7 +76,7 @@ const Project = (propsWithType: {
                                     )
                                 )}
                             </div>
-                            <div className="font-title text-xl leading-relaxed text-center w-2/3 mb-7">
+                            <div className="font-title text-xl leading-relaxed text-center w-5/6 tablet:w-4/5 laptop:w-2/3 mb-7">
                                 {propsWithType.children}
                             </div>
                         </div>
