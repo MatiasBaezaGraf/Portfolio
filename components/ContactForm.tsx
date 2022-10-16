@@ -61,7 +61,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                 </h1>
             </div>
             <form
-                className="flex flex-col w-2/3 font-second text-xl"
+                className="flex flex-col w-4/5 tablet:2/3 font-second text-xl"
                 ref={form}
                 onSubmit={sendEmail}
             >
@@ -103,7 +103,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                 />
                 <div className="flex flex-row items-center">
                     <button
-                        className={`group transform duration-1000 delay-[1700ms] flex flex-row w-min items-center text-xl m-2 p-2 pr-3 rounded dark:text-white bg-gray-800 ${
+                        className={`group transform duration-1000 delay-[1700ms] flex flex-row w-min items-center text-xl m-2 p-2 pr-3 rounded text-white bg-gray-800 ${
                             propsWithType.loaded
                                 ? "translate-y-0 opacity-1"
                                 : "translate-y-12 opacity-0"
