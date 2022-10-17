@@ -58,7 +58,7 @@ const Project = (propsWithType: {
                             <h1 className="font-title font-bold text-4xl mb-9">
                                 {propsWithType.title}
                             </h1>
-                            <div className="flex flex-col tablet:flex-row justify-center font-second font-bold items-center text-lg mb-9">
+                            <div className="flex flex-col tablet:flex-row justify-center font-second font-bold items-center text-md mb-9">
                                 {propsWithType.languages.map(
                                     (language, index) => (
                                         <div
@@ -68,8 +68,8 @@ const Project = (propsWithType: {
                                             <Image
                                                 src={`/languages/${language}.png`}
                                                 alt={language}
-                                                width={35}
-                                                height={35}
+                                                width={27}
+                                                height={27}
                                             />
                                             <h1 className="ml-2">{language}</h1>
                                         </div>

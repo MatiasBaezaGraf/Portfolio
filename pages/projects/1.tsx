@@ -29,9 +29,8 @@ const Project1 = () => {
                     APIs in order to get the current daily and hourly forecasts
                     and some other weather details of locations all around the
                     globe and depending on the moment of the day of the searched
-                    location, the background shows one of four different images.
-                    With this project I learnt how to use{" "}
-                    <span className="font-bold">Flask</span>, a{" "}
+                    location, the background changes. With this project I learnt
+                    how to use <span className="font-bold">Flask</span>, a{" "}
                     <span className="font-bold">Python Web framework</span>.
                 </p>
             </Project>
