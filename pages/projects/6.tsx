@@ -11,7 +11,7 @@ const Project6 = () => {
             <Project
                 title="AllPlast"
                 languages={["Rails", "Ruby", "Tailwind", "SQLite"]}
-                images={[Image1]}
+                images={[Image1, Image2, Image3, Image4, Image5]}
             >
                 <p>
                     This web app was built for a local disposable plastic
