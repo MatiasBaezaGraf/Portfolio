@@ -94,8 +94,8 @@ const Home = () => {
                                 <li className={listItemClasses}>
                                     <AppsIcon width={30} height={30} />
                                     <p className={listParagraphClasses}>
-                                        In the last 3 years, I fully developed
-                                        or took part in mutiple web
+                                        In the last 3 years, I have fully
+                                        developed and took part in mutiple web
                                         applications.
                                     </p>
                                 </li>
@@ -118,7 +118,7 @@ const Home = () => {
                                     <SchoolIcon width={30} height={30} />
                                     <p className={listParagraphClasses}>
                                         I&#39;m a fast learner, so acquiring new
-                                        skills to work with always gets me.
+                                        skills to work with fits with me.
                                     </p>
                                 </li>
                                 <li className={listItemClasses}>
@@ -128,7 +128,8 @@ const Home = () => {
                                     />
                                     <p className={listParagraphClasses}>
                                         I love designing and creating user
-                                        friendly, nice looking and feeling apps.
+                                        friendly, great looking and seamless
+                                        apps.
                                     </p>
                                 </li>
                             </ul>
