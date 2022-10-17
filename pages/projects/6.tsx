@@ -1,5 +1,9 @@
 import Project from "../../components/Project";
 import Image1 from "../../public/apps/AllPlast/AllPlast.png";
+import Image2 from "../../public/apps/AllPlast/AllPlast2.png";
+import Image3 from "../../public/apps/AllPlast/AllPlast3.png";
+import Image4 from "../../public/apps/AllPlast/AllPlast4.png";
+import Image5 from "../../public/apps/AllPlast/AllPlast5.png";
 
 const Project6 = () => {
     return (
