@@ -55,15 +55,26 @@ const Project = (propsWithType: {
                                     : "opacity-0 -translate-y-20"
                             }`}
                         >
-                            <h1 className="font-title font-bold text-4xl mb-9">
+                            <h1 className="font-title font-bold text-5xl mb-9">
                                 {propsWithType.title}
                             </h1>
-                            <div className="flex flex-col tablet:flex-row justify-center font-second font-bold items-center text-md mb-9">
+                            <div
+                                className={`transform duration-300 flex flex-grow w-screen items-end mb-5 justify-center ${
+                                    loadOut ? "opacity-0" : "opacity-1"
+                                } ${
+                                    loaded
+                                        ? "opacity-1 translate-y-0"
+                                        : "opacity-0 translate-y-20"
+                                }`}
+                            >
+                                <ProjectGallery images={propsWithType.images} />
+                            </div>
+                            <div className="flex flex-wrap tablet:flex-row justify-center font-second font-bold items-center text-md mb-5">
                                 {propsWithType.languages.map(
                                     (language, index) => (
                                         <div
                                             key={index}
-                                            className="flex flex-row justify-start items-center w-fit bg-stone-500 text-black rounded my-2 mr-4 py-1 px-2"
+                                            className="transform duration-500 flex flex-row justify-start items-center w-fit bg-stone-400 text-black dark:bg-stone-600 dark:text-white rounded my-2 mr-4 py-1 px-2"
                                         >
                                             <Image
                                                 src={`/languages/${language}.png`}
@@ -81,17 +92,6 @@ const Project = (propsWithType: {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div
-                    className={`transform duration-300 flex flex-grow items-end justify-center ${
-                        loadOut ? "opacity-0" : "opacity-1"
-                    } ${
-                        loaded
-                            ? "opacity-1 translate-y-0"
-                            : "opacity-0 translate-y-20"
-                    }`}
-                >
-                    <ProjectGallery images={propsWithType.images} />
                 </div>
             </div>
         </div>

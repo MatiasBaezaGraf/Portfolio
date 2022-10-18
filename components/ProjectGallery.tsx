@@ -37,10 +37,10 @@ const ProjectGallery = (propsWithType: { images: Array<StaticImageData> }) => {
                             onClick={() => modalHandler(image)}
                             id={`${index}`}
                             key={index}
-                            className="transform duration-300 cursor-pointer flex-shrink-0 snap-center m-5 border-black border-2 hover:scale-110"
+                            className="transform w-fit duration-300 cursor-pointer flex-shrink-0 snap-center m-5 border-black border-2 hover:scale-110"
                         >
                             <Image
-                                className="w-[250px] tablet:w-[500px]"
+                                className="w-auto laptop:w-[500px]"
                                 src={image}
                                 placeholder="blur"
                                 alt="Project"
