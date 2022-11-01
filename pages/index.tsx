@@ -12,6 +12,8 @@ import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 
 import portrait from "../public/mainicons/portrait.png";
 import MainTitle from "../components/MainTitle";
+import Router from "next/router";
+import { useRouter } from "next/router";
 
 const Home = () => {
     const [loaded, setLoaded] = useState(false);
@@ -38,6 +40,14 @@ const Home = () => {
         } else {
             switchToDarkMode();
         }
+    };
+
+    const router = useRouter();
+
+    const handleRouting = (route: string) => {
+        setTimeout(() => {
+            Router.push(route);
+        }, 300);
     };
 
     return (
@@ -133,6 +143,27 @@ const Home = () => {
                                     </p>
                                 </li>
                             </ul>
+                            {/* <div className="flex flex-row items-center">
+                                <p className={listParagraphClasses}>
+                                    You can learn more{" "}
+                                    <span
+                                        onClick={() => {
+                                            if ("/info" != router.pathname) {
+                                                setLoadOut(true);
+                                            }
+                                            handleRouting("/info");
+                                        }}
+                                        className="font-bold cursor-pointer underline"
+                                    >
+                                        about me
+                                    </span>{" "}
+                                    or download my resume.
+                                </p>
+                                <button className="flex flex-row items-center font-main text-lg bg-blue-500 p-2 m-2 rounded">
+                                    Resume PDF
+                                    <ArrowDownOnSquareIcon className="w-6 h-6" />
+                                </button>
+                            </div> */}
                         </div>
                     </div>
                 </div>

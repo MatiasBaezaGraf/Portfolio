@@ -35,13 +35,13 @@ const Navbar = (propsWithType: {
                 <button
                     className={buttonClasses}
                     onClick={() => {
-                        if ("/contact" != router.pathname) {
+                        if ("/info" != router.pathname) {
                             propsWithType.setLoadOut();
                         }
-                        handleRouting("/contact");
+                        handleRouting("/info");
                     }}
                 >
-                    Contact
+                    About
                 </button>
 
                 <button
@@ -54,6 +54,18 @@ const Navbar = (propsWithType: {
                     }}
                 >
                     Projects
+                </button>
+
+                <button
+                    className={buttonClasses}
+                    onClick={() => {
+                        if ("/contact" != router.pathname) {
+                            propsWithType.setLoadOut();
+                        }
+                        handleRouting("/contact");
+                    }}
+                >
+                    Contact
                 </button>
             </div>
             <div className="self-end">

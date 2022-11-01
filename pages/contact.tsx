@@ -9,10 +9,7 @@ const Contact = () => {
     const [loadOut, setLoadOut] = useState(false);
 
     const {
-        autoModeActive, // boolean - whether the auto mode is active or not
-        autoModeSupported, // boolean - whether the auto mode is supported on this browser
         darkModeActive, // boolean - whether the dark mode is active or not
-        switchToAutoMode, // function - toggles the auto mode on
         switchToDarkMode, // function - toggles the dark mode on
         switchToLightMode, // function - toggles the light mode on
     } = useDarkMode();
