@@ -14,6 +14,7 @@ import portrait from "../public/mainicons/portrait.png";
 import MainTitle from "../components/MainTitle";
 import Router from "next/router";
 import { useRouter } from "next/router";
+import { ArrowDownOnSquareIcon } from "@heroicons/react/24/solid";
 
 const Home = () => {
     const [loaded, setLoaded] = useState(false);
@@ -143,7 +144,7 @@ const Home = () => {
                                     </p>
                                 </li>
                             </ul>
-                            {/* <div className="flex flex-row items-center">
+                            <div className="flex flex-row items-center">
                                 <p className={listParagraphClasses}>
                                     You can learn more{" "}
                                     <span
@@ -153,17 +154,19 @@ const Home = () => {
                                             }
                                             handleRouting("/info");
                                         }}
-                                        className="font-bold cursor-pointer underline"
+                                        className="transform duration-200 font-bold cursor-pointer underline hover:-translate-y-1"
                                     >
                                         about me
                                     </span>{" "}
                                     or download my resume.
                                 </p>
-                                <button className="flex flex-row items-center font-main text-lg bg-blue-500 p-2 m-2 rounded">
-                                    Resume PDF
-                                    <ArrowDownOnSquareIcon className="w-6 h-6" />
-                                </button>
-                            </div> */}
+                                <a href="CV.pdf" download>
+                                    <button className="transform duration-200 flex flex-row items-center font-main text-lg bg-blue-500 p-2 m-2 rounded hover:scale-105">
+                                        Resume PDF
+                                        <ArrowDownOnSquareIcon className="w-6 h-6" />
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
