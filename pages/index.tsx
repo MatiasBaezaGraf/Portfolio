@@ -16,6 +16,8 @@ import Router from "next/router";
 import { useRouter } from "next/router";
 import { ArrowDownOnSquareIcon } from "@heroicons/react/24/solid";
 
+import translations from "../public/locales.js";
+
 const Home = () => {
     const [loaded, setLoaded] = useState(false);
     const [loadOut, setLoadOut] = useState(false);
@@ -45,6 +47,10 @@ const Home = () => {
 
     const router = useRouter();
 
+    const { locale } = useRouter();
+    const { heading, skill1, skill2, skill3, skill4, skill5 } =
+        translations[locale].index;
+
     const handleRouting = (route: string) => {
         setTimeout(() => {
             Router.push(route);
@@ -72,8 +78,8 @@ const Home = () => {
                         <div
                             className={`transform duration-1000 rounded-lg w-5/6 tablet:w-2/3 laptop:w-1/3 laptop:m-0 overflow-hidden shadow-stone-600 dark:shadow-black ${
                                 loaded
-                                    ? "translate-x-0 shadow-lg"
-                                    : "-translate-x-[40rem]"
+                                    ? "translate-x-0 shadow-lg opacity-1"
+                                    : "-translate-x-[40rem] opacity-0"
                             }`}
                         >
                             <Image
@@ -90,46 +96,31 @@ const Home = () => {
                             }`}
                         >
                             <p className="font-main leading-relaxed text-xl mb-4 ml-2">
-                                Hello there! I was born, raised and currently
-                                based in Argentina. In December I become a{" "}
-                                <span className="font-bold">
-                                    Systems Engineer
-                                </span>{" "}
-                                and I&#39;m passionate for{" "}
-                                <span className="font-bold">
-                                    software development
-                                </span>{" "}
-                                and always willing to learn new ways to do so.
+                                {heading}
                             </p>
                             <ul>
                                 <li className={listItemClasses}>
                                     <AppsIcon width={30} height={30} />
                                     <p className={listParagraphClasses}>
-                                        In the last 3 years, I have fully
-                                        developed and took part in mutiple web
-                                        applications.
+                                        {skill1}
                                     </p>
                                 </li>
                                 <li className={listItemClasses}>
                                     <PsychologyIcon height={30} width={30} />
                                     <p className={listParagraphClasses}>
-                                        As an almost Systems Engineer, problem
-                                        solving is one of my strengths.
+                                        {skill2}
                                     </p>
                                 </li>
                                 <li className={listItemClasses}>
                                     <ShuffleIcon height={30} width={30} />
                                     <p className={listParagraphClasses}>
-                                        I&#39;m versatile and can efficiently
-                                        work either by myself or as a part of a
-                                        team.
+                                        {skill3}
                                     </p>
                                 </li>
                                 <li className={listItemClasses}>
                                     <SchoolIcon width={30} height={30} />
                                     <p className={listParagraphClasses}>
-                                        I&#39;m a fast learner, so acquiring new
-                                        skills to work with fits with me.
+                                        {skill4}
                                     </p>
                                 </li>
                                 <li className={listItemClasses}>
@@ -138,9 +129,7 @@ const Home = () => {
                                         height="30px"
                                     />
                                     <p className={listParagraphClasses}>
-                                        I love designing and creating user
-                                        friendly, great looking and seamless
-                                        apps.
+                                        {skill5}
                                     </p>
                                 </li>
                             </ul>

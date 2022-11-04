@@ -1,11 +1,16 @@
+import { useRouter } from "next/router.js";
 import { SocialIcon } from "react-social-icons";
 
-// For mobile view, the social icons are displayed in a different div, so the code block is repeated
+import translations from "../public/locales.js";
 
+// For mobile view, the social icons are displayed in a different div, so the code block is repeated
 const MainTitle = (propsWithType: {
     loaded: boolean;
     darkModeActive: boolean;
 }) => {
+    const { locale } = useRouter();
+    const { title } = translations[locale].index;
+
     return (
         <div className="flex flex-col pb-4 items-center laptop:items-start">
             <h1
@@ -109,7 +114,7 @@ const MainTitle = (propsWithType: {
                         : "opacity-0 -translate-y-12"
                 }`}
             >
-                Software Developer
+                {title}
             </h1>
             <div className="py-5 laptop:hidden">
                 <span
