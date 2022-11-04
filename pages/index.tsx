@@ -70,9 +70,9 @@ const Home = () => {
                     />
                     <div className="flex flex-col items-center laptop:items-start laptop:flex-row">
                         <div
-                            className={`transform duration-1000 rounded-lg w-5/6 tablet:w-2/3 laptop:w-1/3 laptop:m-0 overflow-hidden shadow-lg shadow-stone-600 dark:shadow-black ${
+                            className={`transform duration-1000 rounded-lg w-5/6 tablet:w-2/3 laptop:w-1/3 laptop:m-0 overflow-hidden shadow-stone-600 dark:shadow-black ${
                                 loaded
-                                    ? "translate-x-0"
+                                    ? "translate-x-0 shadow-lg"
                                     : "-translate-x-[40rem]"
                             }`}
                         >
@@ -161,7 +161,7 @@ const Home = () => {
                                     or download my resume.
                                 </p>
                                 <a href="CV.pdf" download>
-                                    <button className="transform duration-200 flex flex-row items-center font-main text-lg bg-blue-500 p-2 m-2 rounded hover:scale-105">
+                                    <button className="transform duration-200 flex flex-row items-center font-main text-lg bg-blue-500 p-2 m-2 rounded hover:scale-110">
                                         Resume PDF
                                         <ArrowDownOnSquareIcon className="w-6 h-6" />
                                     </button>

@@ -62,7 +62,7 @@ const Info = () => {
                         <SocialTabs loaded={loaded} darkMode={darkModeActive} />
                     </div>
                     <div className="flex felx-row justify-center w-full">
-                        <div className="flex flex-col items-center w-4/5 laptop:w-2/3 laptop:p-14">
+                        <div className="flex flex-col items-center w-4/5 laptop:w-2/3 my-14 laptop:px-14">
                             <h1 className="font-second font-bold text-5xl mb-10">
                                 About Me
                             </h1>
@@ -71,7 +71,9 @@ const Info = () => {
                                 where is almost like a second language. Since my
                                 childhood I have been attracted to technology. I
                                 love video games and always wanted to know how
-                                on earth a metal box allowed me to play them.
+                                on earth a metal box allowed me to play them. I
+                                have always been very curious, and always wanted
+                                to understand how things worked.
                             </p>
                             <p className={textClasses}>
                                 As I grew up, so did my interest in tech, so I
@@ -85,7 +87,7 @@ const Info = () => {
                                 provided me. On top of that, becoming an
                                 Engineer endowed me with several soft skills. My
                                 goal is to keep learning and growing to become a
-                                good professional and great human being.{" "}
+                                great professional and even better human being.{" "}
                             </p>
                             <h1 className="font-second font-bold text-3xl my-7">
                                 Soft skills
