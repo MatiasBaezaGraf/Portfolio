@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { PaperAirplaneIcon, FaceSmileIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/router";
+
+import translations from "../public/locales.js";
 
 const ContactForm = (propsWithType: { loaded: boolean }) => {
     const [sent, setSent] = useState(false);
@@ -47,6 +50,16 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
             );
     };
 
+    const { locale } = useRouter();
+    const {
+        title,
+        name_placeholder,
+        email_placeholder,
+        message_placeholder,
+        sent_message,
+        button,
+    } = translations[locale].contact;
+
     return (
         <div className="flex flex-col items-center w-full py-12">
             <div className="flex flex-row justify-start w-4/5 tablet:w-2/3">
@@ -57,7 +70,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                             : "-translate-y-12 opacity-0"
                     } `}
                 >
-                    Let&#39;s get in touch!
+                    {title}
                 </h1>
             </div>
             <form
@@ -73,7 +86,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                     }`}
                     onChange={onSetName}
                     value={name}
-                    placeholder="Name..."
+                    placeholder={name_placeholder}
                     type="text"
                     name="user_name"
                 />
@@ -85,7 +98,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                     }`}
                     onChange={onSetEmail}
                     value={email}
-                    placeholder="Email..."
+                    placeholder={email_placeholder}
                     type="email"
                     name="user_email"
                 />
@@ -97,7 +110,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                     }`}
                     onChange={onSetMessage}
                     value={message}
-                    placeholder="Message..."
+                    placeholder={message_placeholder}
                     name="message"
                     rows={15}
                 />
@@ -116,7 +129,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                             message.length == 0
                         }
                     >
-                        Send
+                        {button}
                         <PaperAirplaneIcon
                             className={`transform duration-500 w-5 h-5 ml-2  ${
                                 name.length == 0 ||
@@ -133,8 +146,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
                                 : "translate-y-4 opacity-0"
                         }`}
                     >
-                        Your message has been sent successfully! Thanks for
-                        contacting me!
+                        {sent_message}
                         <FaceSmileIcon className="w-7 h-7 ml-2 text-yellow-500" />
                     </h1>
                 </div>

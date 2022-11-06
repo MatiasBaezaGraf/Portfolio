@@ -47,9 +47,20 @@ const Home = () => {
 
     const router = useRouter();
 
+    //Load the language text
     const { locale } = useRouter();
-    const { heading, skill1, skill2, skill3, skill4, skill5 } =
-        translations[locale].index;
+    const {
+        heading,
+        skill1,
+        skill2,
+        skill3,
+        skill4,
+        skill5,
+        footing_1,
+        footing_2,
+        footing_3,
+        pdf_button,
+    } = translations[locale].index;
 
     const handleRouting = (route: string) => {
         setTimeout(() => {
@@ -59,7 +70,7 @@ const Home = () => {
 
     return (
         <div className={darkModeActive ? "dark" : ""}>
-            <div className="min-h-screen bg-split-light dark:bg-split-dark bg-fixed text-black dark:text-white">
+            <div className="min-h-screen bg-split-light dark:bg-split-dark bg-fixed dark:text-white text-black">
                 <title>Matías Baeza Graf</title>
                 <Navbar
                     setLoadOut={() => setLoadOut(true)}
@@ -135,7 +146,7 @@ const Home = () => {
                             </ul>
                             <div className="flex flex-row items-center">
                                 <p className={listParagraphClasses}>
-                                    You can learn more{" "}
+                                    {footing_1}{" "}
                                     <span
                                         onClick={() => {
                                             if ("/info" != router.pathname) {
@@ -145,13 +156,13 @@ const Home = () => {
                                         }}
                                         className="transform duration-200 font-bold cursor-pointer underline hover:-translate-y-1"
                                     >
-                                        about me
+                                        {footing_2}
                                     </span>{" "}
-                                    or download my resume.
+                                    {footing_3}
                                 </p>
                                 <a href="CV.pdf" download>
                                     <button className="transform duration-200 flex flex-row items-center font-main text-lg bg-blue-500 p-2 m-2 rounded hover:scale-110">
-                                        Resume PDF
+                                        {pdf_button}
                                         <ArrowDownOnSquareIcon className="w-6 h-6" />
                                     </button>
                                 </a>

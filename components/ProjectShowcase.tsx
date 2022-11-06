@@ -11,59 +11,75 @@ import Certificados from "../public/apps/Certificados/Certificados.png";
 import Constancias from "../public/apps/Constancias/Constancias.png";
 import Finances from "../public/apps/Finances/Finances.png";
 
-const projects = [
-    {
-        id: 1,
-        name: "Weather",
-        description: "Weather forecast website made to learn Flask",
-        languages: ["Python"],
-        image: Weather,
-    },
-    {
-        id: 2,
-        name: "UAP Certificados",
-        description:
-            "Website developet to easily verify the validity of UAP student records",
-        languages: ["Rails", "Ruby", "PostgreSQL"],
-        image: Certificados,
-    },
-    {
-        id: 3,
-        name: "Wallet",
-        description: "Simple expense tracker web app",
-        languages: ["React", "Typescript", "Python", "Tailwind", "SQLite"],
-        image: Wallet,
-    },
-    {
-        id: 4,
-        name: "UAP Constacias",
-        description:
-            "Web app for the UAP students to self-manage their student records",
-        languages: ["Rails", "Ruby", "Javascript", "Bootstrap", "PostgreSQL"],
-        image: Constancias,
-    },
-    {
-        id: 5,
-        name: "Finances",
-        description:
-            "Mobile Anroid app used to follow the monthly evolution of some economic indicators",
-        languages: ["Flutter", "Dart"],
-        image: Finances,
-    },
-    {
-        id: 6,
-        name: "AllPlast",
-        description: "Web app made for stock control of a local shop",
-        languages: ["Rails", "Ruby", "Tailwind", "SQLite"],
-        image: AllPlast,
-    },
-];
+import translations from "../public/locales.js";
 
 const ProjectShowcase = (propsWithType: {
     loaded: boolean;
     fadeOutHandler: () => void;
 }) => {
+    const { locale } = useRouter();
+    const {
+        title,
+        project_1_description,
+        project_2_description,
+        project_3_description,
+        project_4_description,
+        project_5_description,
+        project_6_description,
+    } = translations[locale].projects;
+
     const [projectHovering, setProjectHovering] = useState(0);
+
+    const projects = [
+        {
+            id: 1,
+            name: "Weather",
+            description: `${project_1_description}`,
+            languages: ["Python"],
+            image: Weather,
+        },
+        {
+            id: 2,
+            name: "UAP Certificados",
+            description: `${project_2_description}`,
+            languages: ["Rails", "Ruby", "PostgreSQL"],
+            image: Certificados,
+        },
+        {
+            id: 3,
+            name: "Wallet",
+            description: `${project_3_description}`,
+            languages: ["React", "Typescript", "Python", "Tailwind", "SQLite"],
+            image: Wallet,
+        },
+        {
+            id: 4,
+            name: "UAP Constacias",
+            description: `${project_4_description}`,
+            languages: [
+                "Rails",
+                "Ruby",
+                "Javascript",
+                "Bootstrap",
+                "PostgreSQL",
+            ],
+            image: Constancias,
+        },
+        {
+            id: 5,
+            name: "Finances",
+            description: `${project_5_description}`,
+            languages: ["Flutter", "Dart"],
+            image: Finances,
+        },
+        {
+            id: 6,
+            name: "AllPlast",
+            description: `${project_6_description}`,
+            languages: ["Rails", "Ruby", "Tailwind", "SQLite"],
+            image: AllPlast,
+        },
+    ];
 
     const openProject = (id: number) => {
         propsWithType.fadeOutHandler();
@@ -82,7 +98,7 @@ const ProjectShowcase = (propsWithType: {
                 }`}
             >
                 <h1 className="transform duration-1000 text-6xl font-second font-bold text-center text-black dark:text-white">
-                    My projects
+                    {title}
                 </h1>
             </div>
             <div

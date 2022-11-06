@@ -15,7 +15,9 @@ import SocialTabs from "../components/SocialTabs";
 import SkillInfo from "../components/SkillInfo";
 import LanguageList from "../components/LanguageList";
 
-//tech icons
+import { useRouter } from "next/router";
+
+import translations from "../public/locales.js";
 
 const Info = () => {
     const [loaded, setLoaded] = useState(false);
@@ -38,6 +40,28 @@ const Info = () => {
     useEffect(() => {
         setLoaded(true);
     }, []);
+
+    const { locale } = useRouter();
+    const {
+        main_title,
+        about_p1,
+        about_p2,
+        skills_title,
+        skill1,
+        skill1_p,
+        skill2,
+        skill2_p,
+        skill3,
+        skill3_p,
+        skill4,
+        skill4_p,
+        skill5,
+        skill5_p,
+        technologies_title,
+        technologies_p_1,
+        technologies_p_2,
+        technologies_p_3,
+    } = translations[locale].info;
 
     const textClasses = "font-main leading-relaxed text-xl mb-4 ml-2";
 
@@ -64,68 +88,42 @@ const Info = () => {
                     <div className="flex felx-row justify-center w-full">
                         <div className="flex flex-col items-center w-4/5 laptop:w-2/3 my-14 laptop:px-14">
                             <h1 className="font-second font-bold text-5xl mb-10">
-                                About Me
+                                {main_title}
                             </h1>
-                            <p className={textClasses}>
-                                I was born in Argentina in 1999, in a family
-                                where is almost like a second language. Since my
-                                childhood I have been attracted to technology. I
-                                love video games and always wanted to know how
-                                on earth a metal box allowed me to play them. I
-                                have always been very curious, and always wanted
-                                to understand how things worked.
-                            </p>
-                            <p className={textClasses}>
-                                As I grew up, so did my interest in tech, so I
-                                decided to study a tech-oriented carreer. When I
-                                turned 18, I decided to study Systems
-                                Engineering. During my student years I
-                                discovered that what fascinated me the most was
-                                software development, so I began to delve into
-                                the subject on my own, learning various
-                                technologies in addition to the ones the carreer
-                                provided me. On top of that, becoming an
-                                Engineer endowed me with several soft skills. My
-                                goal is to keep learning and growing to become a
-                                great professional and even better human being.{" "}
-                            </p>
+                            <p className={textClasses}>{about_p1}</p>
+                            <p className={textClasses}>{about_p2}</p>
                             <h1 className="font-second font-bold text-3xl my-7">
-                                Soft skills
+                                {skills_title}
                             </h1>
                             <div className="flex flex-col items-center">
-                                <SkillInfo description="Having studied engineering endowed me with the ability to solve any type of problems in a creative and logical way.">
+                                <SkillInfo description={skill1_p}>
                                     <Cog6ToothIcon className="w-6 h-6 mr-2" />
-                                    Problem resolution and logical thinking.
+                                    {skill1}
                                 </SkillInfo>
-                                <SkillInfo description="Even though I'm Argentinian, I grew up with English as my second native langunage, therefore I have excellent understanding and communication skills with it.">
+                                <SkillInfo description={skill2_p}>
                                     <ChatBubbleOvalLeftEllipsisIcon className="w-6 h-6 mr-2" />{" "}
-                                    Communcation in english and spanish.
+                                    {skill2}
                                 </SkillInfo>
-                                <SkillInfo description="During my studies and work, I have learned to work with many people in many different ways and always achieve efectiveness.">
+                                <SkillInfo description={skill3_p}>
                                     <UsersIcon className="w-6 h-6 mr-2" />
-                                    Team or invidual work, always effectively.
+                                    {skill3}
                                 </SkillInfo>
-                                <SkillInfo description="Throughout my experience, several times I had to learn new technologies or work in different ways that I was not used to, which gave me the ability to easily adapt to the needs.">
+                                <SkillInfo description={skill4_p}>
                                     <BoltIcon className="w-6 h-6 mr-2" />{" "}
-                                    Adaptability, flexiblilty and quick
-                                    learning.
+                                    {skill4}
                                 </SkillInfo>
-                                <SkillInfo description="Coding and especially debugging can be harsh sometimes, especially when you can't find out what's wrong. But there's always a solution, and the way to reach it is being patient and not giving up.">
+                                <SkillInfo description={skill5_p}>
                                     <ClockIcon className="w-6 h-6 mr-2" />{" "}
-                                    Patience.
+                                    {skill5}
                                 </SkillInfo>
                             </div>
                             <h1 className="font-second font-bold text-3xl mt-9 mb-7">
-                                Technologies
+                                {technologies_title}
                             </h1>
                             <p className={`mb-10 ${textClasses}`}>
-                                Here is a list of all the technologies I work
-                                with. Of course I have more knowledge with some
-                                than with others, and I love learning new things
-                                so I can adapt to what is required of me. My
-                                preferred ones are <strong>Next JS</strong> and{" "}
-                                <strong>React</strong>, technologies with which
-                                this page is built.
+                                {technologies_p_1}
+                                <strong>{technologies_p_2}</strong>
+                                {technologies_p_3}
                             </p>
                             <LanguageList darkModeActive={darkModeActive} />
                         </div>

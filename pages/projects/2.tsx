@@ -1,35 +1,37 @@
+import { useRouter } from "next/router";
 import Project from "../../components/Project";
 import Image1 from "../../public/apps/Certificados/Certificados.png";
 import Image2 from "../../public/apps/Certificados/Certificados2.png";
 import Image3 from "../../public/apps/Certificados/Certificados3.png";
 
+import translations from "../../public/locales.js";
+
 const Project2 = () => {
+    const { locale } = useRouter();
+    const {
+        title,
+        info_p1,
+        info_p2_1,
+        info_p2_2,
+        info_p2_3,
+        info_p2_4,
+        info_p2_5,
+    } = translations[locale].project2;
     return (
         <div>
             <Project
-                title="UAP Certificados"
+                title={title}
                 languages={["Rails", "Ruby", "PostgreSQL"]}
                 images={[Image1, Image2, Image3]}
             >
-                <p>
-                    This web app was built for the UAP students, to easily
-                    verify the validity of their Student Certificates, and for
-                    the UAP itself, to prevent forgery of certificates. It
-                    consists of a form in which you put a certificate&#39;s
-                    unique code, and it shows, if it exists, to who it belongs,
-                    if it is currently valid and it&#39;s validity period. It
-                    also provides easy QR validation. If you scan the
-                    certificate&#39;s QR code, it redirects you to a page with
-                    all the mentioned information.
-                </p>
+                <p>{info_p1}</p>
                 <br />
                 <p>
-                    The app talks directly with the database, which runs on{" "}
-                    <span className="font-bold">PostgreSQL</span>, to retrieve
-                    all the required information related to the provided
-                    certificate code. The form is protected with Google&#39;s{" "}
-                    <span className="font-bold">reCAPTCHA</span>, to counter
-                    DDOS attacks.
+                    {info_p2_1}
+                    <span className="font-bold">{info_p2_2}</span>
+                    {info_p2_3}
+                    <span className="font-bold">{info_p2_4}</span>
+                    {info_p2_5}
                 </p>
             </Project>
         </div>
