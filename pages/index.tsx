@@ -106,7 +106,7 @@ const Home = () => {
                                     : "translate-x-20 opacity-0"
                             }`}
                         >
-                            <p className="font-main leading-relaxed text-center text-xl mb-4 ml-2">
+                            <p className="font-main leading-relaxed text-center tablet:text-left text-xl mb-4 ml-2">
                                 {heading}
                             </p>
                             <ul>
