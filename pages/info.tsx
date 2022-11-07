@@ -10,6 +10,7 @@ import { useDarkMode } from "next-dark-mode";
 import { useState, useEffect } from "react";
 
 //My components
+import MultipleObserver from "../components/MultipleObserver";
 import Navbar from "../components/Navbar";
 import SocialTabs from "../components/SocialTabs";
 import SkillInfo from "../components/SkillInfo";
@@ -63,7 +64,8 @@ const Info = () => {
         technologies_p_3,
     } = translations[locale].info;
 
-    const textClasses = "font-main leading-relaxed text-xl mb-4 ml-2";
+    const textClasses =
+        "font-main leading-relaxed text-center text-xl mb-4 ml-2";
 
     return (
         <div className={darkModeActive && "dark"}>
@@ -87,19 +89,25 @@ const Info = () => {
                     </div>
                     <div className="flex felx-row justify-center w-full">
                         <div className="flex flex-col items-center w-4/5 laptop:w-2/3 my-14 laptop:px-14">
-                            <h1 className="font-second font-bold text-5xl mb-10">
-                                {main_title}
-                            </h1>
-                            <p className={textClasses}>{about_p1}</p>
-                            <p className={textClasses}>{about_p2}</p>
-                            <h1 className="font-second font-bold text-3xl my-7">
-                                {skills_title}
-                            </h1>
+                            <MultipleObserver>
+                                <h1 className="font-second font-bold text-5xl mb-10">
+                                    {main_title}
+                                </h1>
+                                <p className={textClasses}>{about_p1}</p>
+                                <p className={textClasses}>{about_p2}</p>
+                            </MultipleObserver>
+                            <MultipleObserver>
+                                <h1 className="font-second font-bold text-3xl my-7">
+                                    {skills_title}
+                                </h1>
+                            </MultipleObserver>
+
                             <div className="flex flex-col items-center">
                                 <SkillInfo description={skill1_p}>
                                     <Cog6ToothIcon className="w-6 h-6 mr-2" />
                                     {skill1}
                                 </SkillInfo>
+
                                 <SkillInfo description={skill2_p}>
                                     <ChatBubbleOvalLeftEllipsisIcon className="w-6 h-6 mr-2" />{" "}
                                     {skill2}
@@ -117,15 +125,23 @@ const Info = () => {
                                     {skill5}
                                 </SkillInfo>
                             </div>
-                            <h1 className="font-second font-bold text-3xl mt-9 mb-7">
-                                {technologies_title}
-                            </h1>
-                            <p className={`mb-10 ${textClasses}`}>
-                                {technologies_p_1}
-                                <strong>{technologies_p_2}</strong>
-                                {technologies_p_3}
-                            </p>
-                            <LanguageList darkModeActive={darkModeActive} />
+                            <MultipleObserver>
+                                <h1 className="font-second font-bold text-3xl mt-9 mb-7">
+                                    {technologies_title}
+                                </h1>
+                            </MultipleObserver>
+
+                            <MultipleObserver>
+                                <p className={`mb-10 ${textClasses}`}>
+                                    {technologies_p_1}
+                                    <strong>{technologies_p_2}</strong>
+                                    {technologies_p_3}
+                                </p>
+                            </MultipleObserver>
+
+                            <MultipleObserver>
+                                <LanguageList darkModeActive={darkModeActive} />
+                            </MultipleObserver>
                         </div>
                     </div>
                 </div>

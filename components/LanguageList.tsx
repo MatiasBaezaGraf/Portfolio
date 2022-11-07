@@ -6,12 +6,13 @@ import Flutter from "../public/languages/Flutter.png";
 import Tailwind from "../public/languages/Tailwind.png";
 import Bootstrap from "../public/languages/Bootstrap.png";
 import PostgreSQL from "../public/languages/PostgreSQL.png";
-import SQLite from "../public/languages/SQLite.png";
+
+const itemClasses = "group flex flex-col items-center mx-2";
 
 const LanguageList = (propsWithType: { darkModeActive: boolean }) => {
     return (
         <div className="grid grid-cols-3 tablet:grid-cols-4 laptop:flex laptop:flex-row laptop:justify-around w-full pt-6">
-            <div className="group flex flex-col items-center">
+            <div className={itemClasses}>
                 <svg
                     className="transform duration-200 mx-2 group-hover:-translate-y-1"
                     fill={`${
@@ -28,7 +29,7 @@ const LanguageList = (propsWithType: { darkModeActive: boolean }) => {
                     Next
                 </h5>
             </div>
-            <div className="group flex flex-col items-center">
+            <div className={itemClasses}>
                 <Image
                     className="transform duration-200 mx-2 group-hover:-translate-y-1"
                     src={React}
@@ -40,7 +41,7 @@ const LanguageList = (propsWithType: { darkModeActive: boolean }) => {
                     React
                 </h5>
             </div>
-            <div className="group flex flex-col items-center">
+            <div className={itemClasses}>
                 <svg
                     className="transform duration-200 mx-2 group-hover:-translate-y-1"
                     fill={`${
@@ -57,7 +58,7 @@ const LanguageList = (propsWithType: { darkModeActive: boolean }) => {
                     Django
                 </h5>
             </div>
-            <div className="group flex flex-col items-center">
+            <div className={itemClasses}>
                 <svg
                     className="transform duration-200 mx-2 group-hover:-translate-y-1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +107,7 @@ const LanguageList = (propsWithType: { darkModeActive: boolean }) => {
                     Flask
                 </h5>
             </div>
-            <div className="group flex flex-col items-center">
+            <div className={itemClasses}>
                 <Image
                     className="transform duration-200 mx-2 group-hover:-translate-y-1"
                     src={Rails}
@@ -118,7 +119,7 @@ const LanguageList = (propsWithType: { darkModeActive: boolean }) => {
                     Rails
                 </h5>
             </div>
-            <div className="group flex flex-col items-center">
+            <div className={itemClasses}>
                 <Image
                     className="transform duration-200 mx-2 group-hover:-translate-y-1"
                     src={Flutter}
@@ -130,7 +131,7 @@ const LanguageList = (propsWithType: { darkModeActive: boolean }) => {
                     Flutter
                 </h5>
             </div>
-            <div className="group flex flex-col items-center">
+            <div className={itemClasses}>
                 <Image
                     className="transform duration-200 mx-2 group-hover:-translate-y-1"
                     src={Tailwind}
@@ -142,7 +143,7 @@ const LanguageList = (propsWithType: { darkModeActive: boolean }) => {
                     Tailwind CSS
                 </h5>
             </div>
-            <div className="group flex flex-col items-center">
+            <div className={itemClasses}>
                 <Image
                     className="transform duration-200 mx-2 group-hover:-translate-y-1"
                     src={Bootstrap}
@@ -154,7 +155,7 @@ const LanguageList = (propsWithType: { darkModeActive: boolean }) => {
                     Bootstrap
                 </h5>
             </div>
-            <div className="group flex flex-col items-center">
+            <div className={itemClasses}>
                 <Image
                     className="transform duration-200 mx-2 group-hover:-translate-y-1"
                     src={PostgreSQL}
