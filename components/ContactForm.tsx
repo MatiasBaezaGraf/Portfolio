@@ -62,7 +62,7 @@ const ContactForm = (propsWithType: { loaded: boolean }) => {
 
     return (
         <div className="flex flex-col items-center w-full py-12">
-            <div className="flex flex-row justify-start w-4/5 tablet:w-2/3">
+            <div className="flex flex-row justify-center tablet:justify-start w-4/5 tablet:w-2/3">
                 <h1
                     className={`transform duration-1000 font-second font-bold text-center tablet:text-start text-6xl p-2 text-black dark:text-white ${
                         propsWithType.loaded

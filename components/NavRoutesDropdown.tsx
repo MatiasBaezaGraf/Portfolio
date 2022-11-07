@@ -20,7 +20,7 @@ const NavRoutesDropdown = (propsWithType: {
     const { index, info, projects, contact } = translations[locale].navbar;
 
     const buttonClasses =
-        "translate duration-300 flex flex-row font-second font-bold text-2xl m-3 text-black dark:text-white hover:translate-x-1";
+        "translate duration-300 flex flex-row font-second font-bold text-2xl m-4 text-black dark:text-white hover:translate-x-1";
 
     return (
         <div className="tablet:hidden">
@@ -30,14 +30,14 @@ const NavRoutesDropdown = (propsWithType: {
                 </Menu.Button>
                 <Transition
                     as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
+                    enter="transition ease-out duration-500"
+                    enterFrom="transform -translate-x-80"
+                    enterTo="transform translate-x-0"
+                    leave="transition ease-in duration-300"
+                    leaveFrom="transform transalte-x-0"
+                    leaveTo="transform -translate-x-80"
                 >
-                    <Menu.Items className="absolute left-0 flex flex-col w-56 mt-1 bg-stone-300/95 dark:bg-stone-800/95 items-start rounded-sm">
+                    <Menu.Items className="absolute left-0 flex flex-col w-56 mt-1 h-screen bg-stone-400 dark:bg-black shadow dark:shadow-black items-start">
                         <Menu.Item>
                             <button
                                 className={buttonClasses}

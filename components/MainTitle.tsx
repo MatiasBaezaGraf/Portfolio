@@ -108,7 +108,7 @@ const MainTitle = (propsWithType: {
                 </div>
             </h1>
             <h1
-                className={`transform duration-1000 font-second text-4xl ${
+                className={`transform duration-1000 font-second text-center text-4xl ${
                     propsWithType.loaded
                         ? "opacity-1 translate-y-0"
                         : "opacity-0 -translate-y-12"

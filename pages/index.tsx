@@ -106,7 +106,7 @@ const Home = () => {
                                     : "translate-x-20 opacity-0"
                             }`}
                         >
-                            <p className="font-main leading-relaxed text-xl mb-4 ml-2">
+                            <p className="font-main leading-relaxed text-center text-xl mb-4 ml-2">
                                 {heading}
                             </p>
                             <ul>
@@ -144,7 +144,7 @@ const Home = () => {
                                     </p>
                                 </li>
                             </ul>
-                            <div className="flex flex-row items-center">
+                            <div className="flex flex-col tablet:flex-row items-center">
                                 <p className={listParagraphClasses}>
                                     {footing_1}{" "}
                                     <span
